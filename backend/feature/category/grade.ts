@@ -17,7 +17,7 @@ import GradeMessage from '@/backend/messages/gradeMessage';
 export async function GetGrade() {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/category/grade/list`,
-    { method: 'GET', cache: 'no-store' },
+    { method: 'GET', cache: 'no-cache' },
   );
   const info: IGrade[] = await response.json();
   if (Array.isArray(info)) {
